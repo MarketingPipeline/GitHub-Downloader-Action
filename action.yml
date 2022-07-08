@@ -11,7 +11,7 @@ inputs:
     description: 'GitHub repository italia/publiccode-parser-action'
     default: ''
     required: true
-  OverwriteFile:
+  overwrite:
     description: 'Overwrite Files In Repo'
     default: ''
     required: false
