@@ -1,27 +1,33 @@
+#!/bin/sh
+set -e
 
-#!/bin/bash
-#####################################################
-#  Download Specific folders from Github using SVN
-#  
-#  Author: Declan Cook
-#  Licence: MIT
-#####################################################
-GHDOMAIN="https://github.com/"
-IN=${INPUT_REPO}
-IN=${IN##$GHDOMAIN}
-BRANCH="trunk"
-FOLDER=""
-IFS="/" read -a SECT <<< "$IN" 
-
-if [[ "${SECT[3]}" != "master" ]]; then
-  BRANCH=${SECT[3]}
+if [ -n "${GITHUB_WORKSPACE}" ]; then
+  cd "${GITHUB_WORKSPACE}" || exit
 fi
-for index in "${!SECT[@]}"; do
-  if [ $index -gt 3 ]; then
-    FOLDER=$FOLDER/${SECT[index]}
-  fi
-done
 
-# DOMAIN/USER/PROJECT/<TRUNK||BRANCH>/FOLDER
-echo Exporting $GHDOMAIN${SECT[0]}/${SECT[1]}/$BRANCH$FOLDER
-svn --force export $GHDOMAIN${SECT[0]}/${SECT[1]}/$BRANCH$FOLDER ./
+get_repo() {
+  if [ -n "${INPUT_GITHUB_TOKEN}" ]; then
+    echo "Use INPUT_GITHUB_TOKEN to get release data." >&2
+    curl -s -H "Authorization: token ${INPUT_GITHUB_TOKEN}" "https://api.github.com/repos/${INPUT_REPO}"
+  else
+    echo "INPUT_GITHUB_TOKEN is not available. Subsequent GitHub API call may fail due to API limit." >&2
+    curl -s "https://api.github.com/repos/${INPUT_REPO}"
+  fi
+}
+
+STARS_COUNT=$(get_repo | jq -r '.stargazers_count')
+if [ -z "${STARS_COUNT}" ] || [ "${STARS_COUNT}" = "null" ]; then
+  echo "cannot get star count from ${INPUT_REPO}"
+  exit 1
+fi
+
+LICENSE=$(get_repo | jq -r '.license.name')
+if [ -z "${LICENSE}" ] || [ "${LICENSE}" = "null" ]; then
+  echo "cannot get license from ${INPUT_REPO}"
+  exit 1
+fi
+
+echo "Repo has ${STARS_COUNT} ⭐️ and is released under ${LICENSE} license"
+
+echo "::set-output name=stars::${STARS_COUNT}"
+echo "::set-output name=license::${LICENSE}"
