@@ -17,9 +17,11 @@ IFS="/" read -a SECT <<< "$IN"
 
 if [ -z "$FILEPATH" ]
 then
-      echo "\$FILEPATH is empty"
+      echo "\FILEPATH is empty"
+      FILEPATH="./"
 else
-      echo "\$FILEPATH is NOT empty"
+      echo "\FILEPATH is NOT empty"
+      FILEPATH=$FILEPATH
 fi
 
 if [[ "${SECT[3]}" != "master" ]]; then
@@ -33,4 +35,4 @@ done
 
 # DOMAIN/USER/PROJECT/<TRUNK||BRANCH>/FOLDER
 echo Exporting $GHDOMAIN${SECT[0]}/${SECT[1]}/$BRANCH$FOLDER
-svn --force export $GHDOMAIN${SECT[0]}/${SECT[1]}/$BRANCH$FOLDER ./
+svn --force export $GHDOMAIN${SECT[0]}/${SECT[1]}/$BRANCH$FOLDER $FILEPATH
