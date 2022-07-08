@@ -1,8 +1,8 @@
 FROM debian:stable 
 LABEL maintainer "Sean Pianka <pianka@eml.cc>"
 
-# Bash script to invoke xvfb, any preliminary commands, then invoke project
-COPY entrypoint.sh
-## Working command for commits
-RUN /bin/bash entrypoint.sh
 
+COPY entrypoint.sh /entrypoint.sh
+
+# Code file to execute when the docker container starts up (`entrypoint.sh`)
+RUN ["/bin/bash /entrypoint.sh"]
