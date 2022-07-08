@@ -11,16 +11,10 @@ inputs:
     description: 'GitHub repository italia/publiccode-parser-action'
     default: ''
     required: true
-   Overwrite_File:
+  OverwriteFile:
     description: 'Overwrite Files In Repo'
     default: ''
     required: false
-
-outputs:
-  stars:
-    description: 'The stars of the repository'
-  license:
-    description: 'The license used in the repository'
 
 runs:
   using: 'docker'
@@ -28,7 +22,7 @@ runs:
   args:
     - ${{ inputs.repo }}
     - ${{ inputs.filepath }}
-    - ${{ inputs.Overwrite_File }}
+    - ${{ inputs.OverwriteFile }}
 
 branding:
   icon: 'activity'
