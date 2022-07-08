@@ -31,7 +31,7 @@ A Github Action to download files / folders from another repo.
 <summary>How to use this action</summary>
 <br><br>
 
-<b><i>WARNING</b></i>: files downloaded from a repo containing the same name in your current repo will be OVER-WRITTEN.
+<b><i>WARNING</b></i>: files downloaded from a repo containing the same name in your current repo will be OVER-WRITTEN & placed into the main directory of your repo.
 <br><br>
 <details>
 <summary>How to download files & folders</summary>
