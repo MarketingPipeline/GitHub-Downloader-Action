@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #####################################################
 #  Download Specific folders from Github using SVN
