@@ -1,7 +1,20 @@
-FROM debian:stable 
-LABEL maintainer "Sean Pianka <pianka@eml.cc>"
+FROM alpine:latest
 
+LABEL "com.github.actions.name"="git-bash"
+LABEL "com.github.actions.description"="Run a command or script in a Git-ready environment"
+LABEL "com.github.actions.icon"="hash"
+LABEL "com.github.actions.color"="black"
 
-COPY entrypoint.sh .
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
-CMD /bin/bash entrypoint.sh
+RUN set -e -x; \
+        apk add --no-cache \
+            bash \
+            curl \
+            jq \
+            git \
+            coreutils \
+            openssh-client \
+        ;
+
+COPY entrypoint /usr/local/bin/
+
+ENTRYPOINT ["/usr/local/bin/entrypoint"]
