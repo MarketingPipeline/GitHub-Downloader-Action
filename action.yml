@@ -18,9 +18,10 @@ outputs:
     description: 'The license used in the repository'
 
 runs:
-  using: 'bash'
-  main: 'github-downloader.sh'
-  post: 'github-downloader.sh'
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.repo }}
 
 branding:
   icon: 'activity'
