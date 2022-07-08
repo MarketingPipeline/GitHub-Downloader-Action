@@ -3,9 +3,10 @@ description: 'Action description'
 author: 'italia'
 
 inputs:
-  github_token:
-    description: 'GITHUB_TOKEN'
-    default: '${{ github.token }}'
+  filepath:
+    description: 'File Path To Place Files'
+    default: ''
+    required: false
   repo:
     description: 'GitHub repository italia/publiccode-parser-action'
     default: ''
@@ -22,6 +23,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.repo }}
+    - ${{ inputs.filepath }}
 
 branding:
   icon: 'activity'
