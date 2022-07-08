@@ -7,6 +7,8 @@ LABEL "com.github.actions.color"="black"
 
 RUN set -e -x; \
         apk add --no-cache \
+            svn \
+            wget \
             bash \
             curl \
             jq \
