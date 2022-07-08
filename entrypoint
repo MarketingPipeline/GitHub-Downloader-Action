@@ -3,7 +3,8 @@
 #####################################################
 #  Download Specific folders from Github using SVN
 #  
-#  Author: Declan Cook
+#  Orginal Author: Declan Cook
+#  Modified by: MarketingPip from github.com/MarketingPipeline
 #  Licence: MIT
 #####################################################
 GHDOMAIN="https://github.com/"
