@@ -97,9 +97,9 @@ jobs:
       - name: Optimizing Images
         if: ${{  github.event.inputs.Compress_Images == 'true' }}
         run: |
-          sudo apt-get install python3 python3-pip
-          pip3 install pillow optimize-images
-          optimize-images ./          
+          touch entrypoint.sh
+          git add entrypoint.sh
+          git ls-files --stage    
       ### Replace COC E-mail    
       - name: Updating Code Of Conduct E-Mail
         if: ${{  github.event.inputs.Update_Code_Of_Conduct_EMAIL == 'true' }}
