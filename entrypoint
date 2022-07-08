@@ -9,10 +9,18 @@
 #####################################################
 GHDOMAIN="https://github.com/"
 IN=$1
+FILEPATH=$2
 IN=${IN##$GHDOMAIN}
 BRANCH="trunk"
 FOLDER=""
 IFS="/" read -a SECT <<< "$IN" 
+
+if [ -z "$FILEPATH" ]
+then
+      echo "\$FILEPATH is empty"
+else
+      echo "\$FILEPATH is NOT empty"
+fi
 
 if [[ "${SECT[3]}" != "master" ]]; then
   BRANCH=${SECT[3]}
