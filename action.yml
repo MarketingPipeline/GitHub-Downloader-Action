@@ -22,7 +22,7 @@ runs:
   args:
     - ${{ inputs.repo }}
     - ${{ inputs.filepath }}
-    - ${{ inputs.OverwriteFile }}
+    - ${{ inputs.overwrite }}
 
 branding:
   icon: 'activity'
