@@ -47,7 +47,7 @@ jobs:
         if: ${{  github.event.inputs.Replace_Links_In_Markdown == 'true' }}
         run: |
           sudo apt-get install python3
-          python3 .github/py_repo_tools/replace_repo_links.py
+          python3 replace_repo_links.py
       
       
       ### Metric Images
