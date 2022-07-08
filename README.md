@@ -3,9 +3,33 @@ A Github Action to download files / folders from another repo
 
 
 
+	
+
+## Example & Usage
+
+<h3> WARNING</h3>
+files downloaded from a repo containing the same name in your current repo will be OVER-WRITTEN.
+<br> <br> <br> <br> 
 
 
-Example Usage 
+To download a <b>single file</b>:
+
+     https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/README.md
+
+
+To download a specific <b>folder</b>:
+
+     https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/Folder-Name
+     
+ 
+
+To download all files in a repo <b>folder</b>:
+
+     https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/
+     
+     
+
+Example Workflow Usage 
 
 
     - uses: actions/checkout@v2
@@ -23,4 +47,4 @@ Example Usage
          git push
          
          
- Example [workflow](.github/example_workflow.yaml)         
+Example [workflow file](.github/example_workflow.yaml)         
