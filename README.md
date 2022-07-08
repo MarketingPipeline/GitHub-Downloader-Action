@@ -31,8 +31,7 @@ A Github Action to download files / folders from another repo.
 <summary>How to use this action</summary>
 <br><br>
 
-<b><i>WARNING</b></i>: files downloaded from a repo containing the same name in your current repo will be OVER-WRITTEN & placed into the main directory of your repo.
-<br><br>
+
 <details>
 <summary>How to download files & folders</summary>
 <br><br>
@@ -85,7 +84,64 @@ To download all files in a repo <b><i>folder</b></i>:
 
 Example [workflow file](.github/example_workflow.yaml)         
 
+
+<br>
+
+### Workflow Options:
+
+<details>
+<summary>How to change download path</summary>
+
+<br>
+
+### WARNING: Desintation folder / download path must exist in your repo or you will face issues
+
+By default files will be placed into the root of your repo.  To change this you need to include this option in your workflow.
+
+
+
+Example:
+
+      with:
+        repo: https://github.com/MarketingPipeline/GitHub-Downloader-Action/blob/master/README.md
+	filepath: .github/
+	
+	
+	
 <br><br>
+
+
+</summary>
+
+</details>
+
+<details>
+
+<summary> How to over-write filenames</summary>
+
+<br>
+
+By default files will not be over-written. To change this you need to include this option in your workflow.
+
+Example:
+
+
+
+      with:
+         repo: https://github.com/MarketingPipeline/GitHub-Downloader-Action/blob/master/README.md
+	 filepath: .github/
+	 overwrite: true
+
+
+
+
+<br><br>
+
+</details>
+
+
+<br><br>
+
 </details>
 
 
