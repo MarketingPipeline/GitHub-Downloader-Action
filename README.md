@@ -26,10 +26,19 @@ A Github Action to download files / folders from another repo.
 
 ## Example and usage
 
-<b><i>WARNING</b></i>: files downloaded from a repo containing the same name in your current repo will be OVER-WRITTEN.
 
+<details>
+<summary>How to use this action</summary>
+<br><br>
+
+<b><i>WARNING</b></i>: files downloaded from a repo containing the same name in your current repo will be OVER-WRITTEN.
+<br><br>
+<details>
+<summary>How to download files & folders</summary>
+<br><br>
 
 To download a <b><i>single file</b></i>:
+
 
      https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/README.md
 
@@ -43,12 +52,18 @@ To download all files in a repo <b><i>folder</b></i>:
 
      https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/
      
-     
+</details>     
 <br>     
+
+
+<details>
+<summary>Workflow Example(s) / Usage </summary>
+
+<br><br>
 
 <details>
 <summary> View Example <b>Workflow Usage</b></summary> 
-
+<br><br>
 
     - uses: actions/checkout@v2
     - uses: MarketingPipeline/GitHub-Downloader-Action@main
@@ -70,7 +85,11 @@ To download all files in a repo <b><i>folder</b></i>:
 
 Example [workflow file](.github/example_workflow.yaml)         
 
+<br><br>
+</details>
 
+
+</details>
 
 
 ## Contributing ![GitHub](https://img.shields.io/github/contributors/MarketingPipeline/Simply-Docs)
