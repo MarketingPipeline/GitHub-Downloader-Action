@@ -1,35 +1,53 @@
 # GitHub-Downloader-Action
-A Github Action to download files / folders from another repo
+
+
+<p align="center">
+  <img height="400" src="https://i.imgur.com/lRDqqVA.png" />
+</p>
+<div align="center">
+A Github Action to download files / folders from another repo.
+  
+  
+   <br>
+  <small> <b><i>Show your support!</i> </b></small>
+  <br>
+   <a href="https://github.com/MarketingPipeline/Simply-Docs">
+    <img title="Star on GitHub" src="https://img.shields.io/github/stars/MarketingPipeline/Simply-Docs.svg?style=social&label=Star">
+  </a>
+  <a href="https://github.com/MarketingPipeline/Simply-Docs/fork">
+    <img title="Fork on GitHub" src="https://img.shields.io/github/forks/MarketingPipeline/Simply-Docs.svg?style=social&label=Fork">
+  </a>
+   </p>  
+ </div>
 
 
 
 	
 
-## Example & Usage
+## Example and usage
 
-<h3> WARNING</h3>
-files downloaded from a repo containing the same name in your current repo will be OVER-WRITTEN.
-<br> <br> <br> <br> 
+<b><i>WARNING</b></i>: files downloaded from a repo containing the same name in your current repo will be OVER-WRITTEN.
 
 
-To download a <b>single file</b>:
+To download a <b><i>single file</b></i>:
 
      https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/README.md
 
-
-To download a specific <b>folder</b>:
+To download a specific <b><i>folder</b></i>:
 
      https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/Folder-Name
      
  
 
-To download all files in a repo <b>folder</b>:
+To download all files in a repo <b><i>folder</b></i>:
 
      https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/
      
      
+<br>     
 
-Example Workflow Usage 
+<details>
+<summary> View Example <b>Workflow Usage</b></summary> 
 
 
     - uses: actions/checkout@v2
@@ -46,5 +64,25 @@ Example Workflow Usage
          git commit -m "Updated Static Content"
          git push
          
-         
+</details>
+
+<br>
+
 Example [workflow file](.github/example_workflow.yaml)         
+
+
+
+
+## Contributing ![GitHub](https://img.shields.io/github/contributors/MarketingPipeline/Simply-Docs)
+
+Want to suggest design changes? Create a pull request with an image of the page with your updated design changes! If approved you will be added to the list of contributors of this awesome project!
+
+See also the list of
+[contributors](https://github.com/MarketingPipeline/Simply-Docs/graphs/contributors) who
+participate in this project.
+
+## License ![GitHub](https://img.shields.io/github/license/MarketingPipeline/Simply-Docs)
+
+This project is licensed under the MIT License - see the
+[LICENSE.md](https://github.com/MarketingPipeline/Simply-Docs/blob/main/LICENSE) file for
+details.
