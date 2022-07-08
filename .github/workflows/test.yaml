@@ -11,7 +11,7 @@ jobs:
     - uses: MarketingPipeline/GitHub-Downloader-Action@main
       with:
         # Define the folder or file to download
-        repo: https://github.com/MarketingPipeline/Awesome-Repo-Template/blob/main/.github/py_repo_tools/replace_repo_links.py
+        repo: https://github.com/MarketingPipeline/Awesome-Repo-Template/blob/master/.github/py_repo_tools/replace_repo_links.py
 
      # Commit the updates
     - name: Commit and Push Downloaded Files 
