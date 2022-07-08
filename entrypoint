@@ -10,19 +10,35 @@
 GHDOMAIN="https://github.com/"
 IN=$1
 FILEPATH=$2
+OVERWRITE=$3
 IN=${IN##$GHDOMAIN}
 BRANCH="trunk"
 FOLDER=""
 IFS="/" read -a SECT <<< "$IN" 
 
+
+### File Path Option
 if [ -z "$FILEPATH" ]
 then
-      echo "\FILEPATH is empty"
+      echo "\FILEPATH option was not chosen, files will be moved into main repo folder"
       FILEPATH="./"
 else
-      echo "\FILEPATH is NOT empty"
+      echo "\FILEPATH option was chosen, files will be moved into $FILEPATH if it exists"
       FILEPATH=$FILEPATH
 fi
+
+
+### Overwrite files
+
+if [ -z "$OVERWRITE" == "True"]
+then
+      echo "\OVERWRITE option was not chosen, files will not be overwritten"
+      OVERWRITE=""
+else
+      echo "\OVERWRITE option was chosen, files will be overwritten"
+      OVERWRITE="--force"
+fi
+
 
 if [[ "${SECT[3]}" != "master" ]]; then
   BRANCH=${SECT[3]}
@@ -35,4 +51,4 @@ done
 
 # DOMAIN/USER/PROJECT/<TRUNK||BRANCH>/FOLDER
 echo Exporting $GHDOMAIN${SECT[0]}/${SECT[1]}/$BRANCH$FOLDER
-svn --force export $GHDOMAIN${SECT[0]}/${SECT[1]}/$BRANCH$FOLDER $FILEPATH
+svn $OVERWRITE export $GHDOMAIN${SECT[0]}/${SECT[1]}/$BRANCH$FOLDER $FILEPATH
