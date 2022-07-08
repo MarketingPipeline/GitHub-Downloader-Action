@@ -11,11 +11,11 @@ A Github Action to download files / folders from another repo.
    <br>
   <small> <b><i>Show your support!</i> </b></small>
   <br>
-   <a href="https://github.com/MarketingPipeline/Simply-Docs">
-    <img title="Star on GitHub" src="https://img.shields.io/github/stars/MarketingPipeline/Simply-Docs.svg?style=social&label=Star">
+   <a href="https://github.com/MarketingPipeline/GitHub-Downloader-Action">
+    <img title="Star on GitHub" src="https://img.shields.io/github/stars/MarketingPipeline/GitHub-Downloader-Action.svg?style=social&label=Star">
   </a>
-  <a href="https://github.com/MarketingPipeline/Simply-Docs/fork">
-    <img title="Fork on GitHub" src="https://img.shields.io/github/forks/MarketingPipeline/Simply-Docs.svg?style=social&label=Fork">
+  <a href="https://github.com/MarketingPipeline/GitHub-Downloader-Action/fork">
+    <img title="Fork on GitHub" src="https://img.shields.io/github/forks/MarketingPipeline/GitHub-Downloader-Action.svg?style=social&label=Fork">
   </a>
    </p>  
  </div>
@@ -92,16 +92,16 @@ Example [workflow file](.github/example_workflow.yaml)
 </details>
 
 
-## Contributing ![GitHub](https://img.shields.io/github/contributors/MarketingPipeline/Simply-Docs)
+## Contributing ![GitHub](https://img.shields.io/github/contributors/MarketingPipeline/GitHub-Downloader-Action)
 
 Want to suggest design changes? Create a pull request with an image of the page with your updated design changes! If approved you will be added to the list of contributors of this awesome project!
 
 See also the list of
-[contributors](https://github.com/MarketingPipeline/Simply-Docs/graphs/contributors) who
+[contributors](https://github.com/MarketingPipeline/GitHub-Downloader-Action/graphs/contributors) who
 participate in this project.
 
-## License ![GitHub](https://img.shields.io/github/license/MarketingPipeline/Simply-Docs)
+## License ![GitHub](https://img.shields.io/github/license/MarketingPipeline/GitHub-Downloader-Action)
 
 This project is licensed under the MIT License - see the
-[LICENSE.md](https://github.com/MarketingPipeline/Simply-Docs/blob/main/LICENSE) file for
+[LICENSE.md](https://github.com/MarketingPipeline/GitHub-Downloader-Action/blob/main/LICENSE) file for
 details.
