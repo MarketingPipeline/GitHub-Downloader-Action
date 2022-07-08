@@ -6,7 +6,7 @@
 #  Licence: MIT
 #####################################################
 GHDOMAIN="https://github.com/"
-IN=${INPUT_REPO}
+IN=$1
 IN=${IN##$GHDOMAIN}
 BRANCH="trunk"
 FOLDER=""
