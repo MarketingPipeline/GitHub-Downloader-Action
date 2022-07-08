@@ -1,3 +1,4 @@
+
 #!/bin/bash
 #####################################################
 #  Download Specific folders from Github using SVN
@@ -6,7 +7,7 @@
 #  Licence: MIT
 #####################################################
 GHDOMAIN="https://github.com/"
-IN="$1"
+IN=$1
 IN=${IN##$GHDOMAIN}
 BRANCH="trunk"
 FOLDER=""
