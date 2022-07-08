@@ -8,8 +8,7 @@ A Github Action to download files / folders from another repo
 Example Usage 
 
 
-
-    - name: Run Github Downloader
+    - uses: actions/checkout@v2
     - uses: MarketingPipeline/GitHub-Downloader-Action@main
       with:
         repo: https://github.com/MarketingPipeline/GitHub-Downloader-Action/blob/master/README.md
