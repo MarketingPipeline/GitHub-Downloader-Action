@@ -34,7 +34,7 @@ if [ -z "$OVERWRITE"]; then
       echo "\OVERWRITE option was not chosen, files will not be overwritten"
       OVERWRITE=""
 fi
-if [ -z "$OVERWRITE" == "true"]; then
+if [[ "$OVERWRITE" == "true" ]]; then
       echo "\OVERWRITE option was chosen, files will be overwritten"
       OVERWRITE="--force"
 fi
