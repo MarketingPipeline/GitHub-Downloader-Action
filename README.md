@@ -94,7 +94,7 @@ Example [workflow file](.github/example_workflow.yaml)
 
 ## Contributing ![GitHub](https://img.shields.io/github/contributors/MarketingPipeline/GitHub-Downloader-Action)
 
-Want to suggest design changes? Create a pull request with an image of the page with your updated design changes! If approved you will be added to the list of contributors of this awesome project!
+Want to imrpove this action? Create a pull request with described in detail with your changes! If approved you will be added to the list of contributors of this awesome project!
 
 See also the list of
 [contributors](https://github.com/MarketingPipeline/GitHub-Downloader-Action/graphs/contributors) who
