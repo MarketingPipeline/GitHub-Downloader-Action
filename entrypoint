@@ -30,7 +30,7 @@ fi
 
 ### Overwrite files
 
-if [ -z "$OVERWRITE" == "True"]
+if [ -z "$OVERWRITE"]
 then
       echo "\OVERWRITE option was not chosen, files will not be overwritten"
       OVERWRITE=""
