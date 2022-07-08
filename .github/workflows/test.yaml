@@ -1,6 +1,6 @@
 name: GitHub Downloader
 # Define when to run job here
-on: [push, pull_request]
+#on: [push, pull_request]
 
 jobs:
   example_job:
