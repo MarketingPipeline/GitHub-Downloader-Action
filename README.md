@@ -39,17 +39,27 @@ A Github Action to download single files or folders from another repo without cl
 To download a <b><i>single file</b></i>:
 
 
-     https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/README.md
+     - uses: MarketingPipeline/GitHub-Downloader-Action@main
+       with:
+         repo: https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/README.md
 
 To download a specific <b><i>folder</b></i>:
 
-     https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/Folder-Name
+
+
+     - uses: MarketingPipeline/GitHub-Downloader-Action@main
+       with:
+         repo: https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/Folder-Name
      
  
 
 To download all files in a repo <b><i>folder</b></i>:
 
-     https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/
+ 
+ 
+      - uses: MarketingPipeline/GitHub-Downloader-Action@main
+       with:
+         repo: https://github.com/Repo-Owner-UserName/Repo-Name/blob/master/
      
 </details>     
 <br>     
