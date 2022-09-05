@@ -1,6 +1,6 @@
 name: 'Action name'
 description: 'Action description'
-author: 'italia'
+author: 'github.com/MarketingPipeline'
 
 inputs:
   filepath:
